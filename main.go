@@ -10,19 +10,14 @@ package main
 	Or using a single import statement and encapsulating the packages in (parenthesis), like below
 */
 import (
-	"fmt"
 	"fountations/tour/mascot"
-
-	// To download a package, use go get <Name> in terminal
-	// Go package library: https://pkg.go.dev/
-	"rsc.io/quote"
 )
 
 func main() {
-	ProjectSetup()
+	Mascot()
 }
 
-func ProjectSetup() {
-	fmt.Println(mascot.BestMascot())
-	fmt.Println(quote.Glass())
+// Project Setup tutorial
+func Mascot() {
+	mascot.Run()
 }
