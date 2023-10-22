@@ -7,17 +7,22 @@ package main
 		import "fmt"
 		import "rsc.io/quote"
 
-	Or using a single import statement and encapsulating the packages in (parenthesis), like below
+	Or using a "factored" import statement with packages encapsulated in (parenthesis), like below
 */
 import (
 	"fountations/tour/mascot"
+	"fountations/tour/packages"
 )
 
 func main() {
-	Mascot()
+	Basics()
 }
 
 // Project Setup tutorial
 func Mascot() {
 	mascot.Run()
+}
+
+func Basics() {
+	packages.Main()
 }
