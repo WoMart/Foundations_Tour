@@ -6,7 +6,7 @@ import (
 	"math/rand"
 )
 
-// This Main is exported
+// Uppercase Main is exported
 func Main() {
 	// https://go.dev/tour/basics/1
 	fmt.Println("Random number: ", rand.Intn(10))
@@ -17,7 +17,7 @@ func Main() {
 	main()
 }
 
-// This main is not exported (it's internal)
+// Lowercase main is not exported (it's internal)
 func main() {
 	fmt.Println(
 		"\nExported names need to begin with uppercase letter.")
