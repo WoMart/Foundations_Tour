@@ -26,6 +26,8 @@ func main() {
 	fmt.Println(
 		"Try it yourself!")
 	fmt.Println()
+
+	fmt.Println("Check out the code for samples of different ways to define functions.")
 }
 
 // Here's a function with parameters
@@ -35,8 +37,35 @@ func add(x int, y int) int {
 	return x + y
 }
 
-// And here is a non-returning function, equivalent to void
+// Consecutive parameters of the same type can share one type definition
+// This should be at the end of the list of parameters
+func subtract(x, y int) int {
+	return x - y
+}
+
+func sampleWithMultipleParamLists(x, y int, s1, s2 string) {
+	fmt.Println(x + y)
+	fmt.Println(s1 + s2)
+}
+
+// This is a non-returning function, equivalent to void
 // Void functions are simply defined without a type
 func text(str string) {
 	fmt.Println(str)
+}
+
+// Return several values using the (tuple) syntax
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+// Return values can be given names in the function signature
+// and referenced without var or type definition inside the function body
+func swap2(x, y int) (a, b int) {
+	a = y
+	b = x
+
+	// This is a "Naked return", but `return a, b` would also work
+	// Naked returns should only be used for short and simple functions (readability)
+	return
 }
